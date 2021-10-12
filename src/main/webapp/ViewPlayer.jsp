@@ -94,7 +94,7 @@ p.text-center{
 						
 				</li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="<%=request.getContextPath()%>/add">Add Player Details<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="AddPlayer.jsp">Add Player Details<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<%=request.getContextPath()%>/view">View Player Details</a>

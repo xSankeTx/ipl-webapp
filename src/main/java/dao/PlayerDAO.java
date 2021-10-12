@@ -1,10 +1,10 @@
 package dao;
 
-//import java.io.IOException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-//import java.sql.SQLException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,26 +12,31 @@ import model.Player;
 import utility.ConnectionManager;
 
 public class PlayerDAO implements PlayerDAOInterface {
-    //private static final String INSERT_BLOG_SQL = "INSERT INTO blog(blogId, blogTitle, blogDescription, postedOn)values(blog_seq.nextval,?,?,?)";
+	private static final String INSERT_player_SQL = "INSERT INTO player(player_name, player_team_name, player_number,player_salary_in_cr,number_of_ads,number_of_matches)values(?,?,?,?,?,?)";
 	private static final String GET_ALL_PLAYERS = "SELECT * FROM player";
-	// public void insertBlog(Blog blog) throws SQLException {
-	// 	System.out.println("Insert blog Invoked");
-	// 	try(Connection con=ConnectionManager.getConnection();
-	// 			PreparedStatement ps=con.prepareStatement(INSERT_BLOG_SQL)){
-	// 		ps.setString(1, blog.getBlogTitle());
-	// 		ps.setString(2,blog.getBlogDescription());
-	// 		ps.setDate(3, java.sql.Date.valueOf(blog.getPostedOn()));
-	// 		ps.executeUpdate();
-			
-	// 	} catch (SQLException e) {
-	// 		e.printStackTrace();
-	// 	} catch (ClassNotFoundException e) {
-			
-	// 		e.printStackTrace();
-	// 	} catch (IOException e) {
-	// 		e.printStackTrace();
-	// 	} 
-	// }
+	public void insertPlayer(Player player) throws SQLException {
+		System.out.println("Insert player details Invoked");
+		try(
+			Connection con=ConnectionManager.getConnection();
+			PreparedStatement ps=con.prepareStatement(INSERT_player_SQL)){
+			ps.setString(1, player.getPlayer_name());
+			ps.setString(2, player.getPlayer_team_name());
+			ps.setInt(3, player.getPlayer_number());
+			ps.setInt(4, player.getPlayer_salary_in_cr());
+			ps.setInt(5, player.getNumber_of_ads());
+			ps.setInt(6, player.getNumber_of_matches());
+			ps.executeUpdate();	
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} 
+		catch (IOException e) {
+			e.printStackTrace();
+		} 
+	}
 		
 	//@Override
 	public List<Player> getAllPlayers() {

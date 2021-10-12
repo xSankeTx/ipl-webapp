@@ -1,5 +1,7 @@
 dao/PlayerDAO.class
 controller/GetAllPlayerController.class
+controller/AddPlayerController.class
+controller/HomePage.class
 utility/ConnectionManager.class
 dao/LoginDAO.class
 model/Player.class
