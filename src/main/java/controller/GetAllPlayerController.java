@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 //import java.util.ArrayList;
 import java.util.List;
+import java.io.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.PlayerDAO;
+import dao.LoginDAO;
 import model.Player;
 
 @WebServlet("/view")
@@ -26,17 +28,25 @@ public class GetAllPlayerController extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Get all players");
-		PlayerDAO playerdao = new PlayerDAO();
-		Player player=new Player();
-		List<Player> playerlist = playerdao.getAllPlayers();
-		for(Player playerlists:playerlist) {
-			System.out.println(playerlists.getPlayer_number());
-		}
-		request.setAttribute("playerlist", playerlist);
-		request.setAttribute("id", player.getPlayer_number());
-		RequestDispatcher rd=request.getRequestDispatcher("view.jsp");
-		rd.forward(request, response);
+		String user=request.getParameter("un");
+		String pwd=request.getParameter("pw");
+		PrintWriter out=response.getWriter();
+		if(LoginDAO.validate(user, pwd)){
+			PlayerDAO playerdao = new PlayerDAO();
+			Player player=new Player();
+			List<Player> playerlist = playerdao.getAllPlayers();
+			for(Player playerlists:playerlist) {
+				System.out.println(playerlists.getPlayer_number());
+			}
+			request.setAttribute("playerlist", playerlist);
+			request.setAttribute("id", player.getPlayer_number());
+			RequestDispatcher rd=request.getRequestDispatcher("view.jsp");
+			rd.forward(request, response);
+		} 
+		else{
+			out.print("Sorry username or password error");  
+		} 
+		
 	}
 
 	

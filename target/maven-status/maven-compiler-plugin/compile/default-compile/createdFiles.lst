@@ -1,3 +1,4 @@
+dao/LoginDAO.class
 dao/PlayerDAO.class
 controller/GetAllPlayerController.class
 model/Player.class
