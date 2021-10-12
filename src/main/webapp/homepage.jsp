@@ -7,9 +7,9 @@ pageEncoding="ISO-8859-1"%>
     <meta character= "UTF-8">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="homepagestyle.css">
     <link rel="stylesheet" href="side.css">
-    <style>
+    <!-- <style>
         .carousel-item{
     height: 100vh;
     min-height: 300px;
@@ -70,7 +70,7 @@ p.text-center{
     color: white;
 }
 
-    </style>
+    </style> -->
 </head>
 
 <body>

@@ -6,5 +6,6 @@ import model.Player;
 
 public interface PlayerDAOInterface {
     void insertPlayer(Player player) throws SQLException;
+    
 	List<Player> getAllPlayers();
 }
