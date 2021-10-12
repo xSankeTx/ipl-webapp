@@ -118,20 +118,29 @@ p.text-center{
       <br>
       <br>
       <br><br>
+	<table border="2">
+	<tr>
+	<td>Player Name</td>
+	<td>Player Team Name</td>
+	<td>Player Number</td>
+	<td>player Salary in cr</td>
+	<td>Number of Ads</td>
+	<td>Number of Matches</td>
+	</tr>
 	<%ArrayList<Player> playerlist = (ArrayList<Player>)request.getAttribute("playerlist");
     for(Player player:playerlist){%>
     <%-- Arranging data in tabular form
     --%>
-       <ul>
-            <li><%=player.getPlayer_name()%></li>
-            <li><%=player.getPlayer_team_name()%></li>
-            <li><%=player.getPlayer_number()%></li>
-            <li><%=player.getPlayer_salary_in_cr()%></li>
-            <li><%=player.getNumber_of_ads()%></li>
-            <li><%=player.getNumber_of_matches()%></li>                  
-        </ul>
+    <tr>
+            <td><%=player.getPlayer_name()%></td>
+            <td><%=player.getPlayer_team_name()%></td>
+            <td><%=player.getPlayer_number()%></td>
+            <td><%=player.getPlayer_salary_in_cr()%></td>
+            <td><%=player.getNumber_of_ads()%></td>
+            <td><%=player.getNumber_of_matches()%></td>    
+    </tr>           
 <%}%>
- 
+ </table>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
