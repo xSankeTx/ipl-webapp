@@ -1,6 +1,6 @@
-dao/LoginDAO.class
 dao/PlayerDAO.class
 controller/GetAllPlayerController.class
-model/Player.class
 utility/ConnectionManager.class
+dao/LoginDAO.class
+model/Player.class
 dao/PlayerDAOInterface.class

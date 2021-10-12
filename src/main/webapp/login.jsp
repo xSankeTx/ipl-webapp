@@ -18,7 +18,7 @@
 body{
    margin:0;
    padding: 0;
-   background-image: url('bg.jpeg');
+   background-image: url('bg.jpg');
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-size: cover;
@@ -75,13 +75,13 @@ form .txt_field{
    left: 0;
    width: 0%;
    height: 2px;
-   background: #8c9e3b;
+   background: #3f77c5;
    transition: .5s;
 }
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label{
    top: -5px;
-   color: #8c9e3b;
+   color: #3f77c5;
 }
 .txt_field input:focus ~ span::before,
 .txt_field input:valid ~ span::before{
@@ -99,7 +99,7 @@ input[type="submit"]{
    width: 100%;
    height: 50px;
    border: 1px solid;
-   background: #a3af56;
+   background: #3f77c5;
    border-radius: 25px;
    font-size: 18px;
    color: #e9f4fb;
@@ -108,7 +108,7 @@ input[type="submit"]{
    outline: none;
 }
 input[type="submit"]:hover{
-   border-color: #8c9e3b;
+   border-color: #23337c;
    transition: .5s;
 }
 .space{
@@ -121,7 +121,7 @@ input[type="submit"]:hover{
 <body>
    <div class="center">
       <h1>Login</h1>
-      <form action="view" method="get">
+      <form action="home" method="get">
          <div class="txt_field">
             <input type="text" name="un" required>
             <span></span>

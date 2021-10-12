@@ -1,6 +1,7 @@
 /home/coder/project/workspace/iplwebapp/src/main/java/model/Player.java
 /home/coder/project/workspace/iplwebapp/src/main/java/dao/PlayerDAO.java
 /home/coder/project/workspace/iplwebapp/src/main/java/dao/PlayerDAOInterface.java
+/home/coder/project/workspace/iplwebapp/src/main/java/controller/HomePage.java
 /home/coder/project/workspace/iplwebapp/src/main/java/dao/LoginDAO.java
 /home/coder/project/workspace/iplwebapp/src/main/java/utility/ConnectionManager.java
 /home/coder/project/workspace/iplwebapp/src/main/java/controller/GetAllPlayerController.java
