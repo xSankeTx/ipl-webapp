@@ -1,5 +1,7 @@
+controller/DeletePlayerController.class
 dao/PlayerDAO.class
 controller/GetAllPlayerController.class
+controller/UpdatePlayerController.class
 controller/AddPlayerController.class
 controller/HomePage.class
 utility/ConnectionManager.class

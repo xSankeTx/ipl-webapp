@@ -270,7 +270,22 @@
     font-style: italic;
   }
   
-
+  input[type="submit"]{
+   width: 150px;
+   height: 50px;
+   border: 1px solid;
+   background: #3f77c5;
+   border-radius: 25px;
+   font-size: 18px;
+   color: #e9f4fb;
+   font-weight: 700;
+   cursor: pointer;
+   outline: none;
+}
+input[type="submit"]:hover{
+   border-color: #23337c;
+   transition: .5s;
+}
 
     </style>
 </head>
@@ -298,11 +313,11 @@
                   <a class="nav-link" href="<%=request.getContextPath()%>/view">View Player Details</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<%=request.getContextPath()%>/update">Update Player Details</a>
+                    <a class="nav-link" href="UpdatePlayer.jsp">Update Player Details</a>
                 </li>
 				
 				<li class="nav-item">
-                    <a class="nav-link" href="<%=request.getContextPath()%>/delete">Delete Player Details</a>
+                    <a class="nav-link" href="DeletePlayer.jsp">Delete Player Details</a>
                 </li>
                 
                  <li class="nav-item">
@@ -366,25 +381,31 @@
                         <div class="add_Player_Details text-center">
           
                          <form action="add" method="post">
-								Player Name:
+								
+								<label for="fname">Player Name:</label><br>
 								<input type="text" name="player_name"/><br>
 								<br>
-								Team Name:
+								
+								<label for="fname">Team Name:</label><br>
 								<input type="text" name="player_team_name"/><br>
 								<br>
-								Jersey Number:
+								
+								<label for="fname">Jersey Number:</label><br>
 								<input type="text" name="player_number"/><br>
 								<br>
-								Player Salary(in Cr.):
+								
+								<label for="fname">Player Salary(in Cr.):</label><br>
 								<input type="text" name="player_salary_in_cr"/><br>
 								<br>
-								Number of ads done:
+								
+								<label for="fname">Number of ads done:</label><br>
 								<input type="text" name="number_of_ads"/><br>
 								<br>
-								Matches Played:
+								
+								<label for="fname">Matches Played:</label><br>
 								<input type="text" name="number_of_matches"/><br>
 								<br>
-								<button id="post" type="submit" >Add Player</button>
+								<input id="post" type="submit" value="Add Player">
 						</form>
           
                         </div>

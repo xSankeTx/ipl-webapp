@@ -8,67 +8,283 @@
 <meta character= "UTF-8">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="homepagestyle.css">
     <link rel="stylesheet" href="side.css">
     <style>
-        .carousel-item{
-    height: 100vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    background-size: cover;
+
+.heading{
+
+	size: 300px;
+	
+
 }
 
-nav{
+.new-page-img{
+
+    position: relative;
+  
+    height:500px;
+  
+    background-size:cover !important;
+  
+    background-position:center center;
+  
+    background-repeat: no-repeat;
+  
+  }
+  
+  .new-page-img ol.breadcrumb{
+  
+    background: transparent;
+  
+  }
+  
+  .new-page-img ol.breadcrumb li,
+  
+  .new-page-img ol.breadcrumb li a{
+  
+    color:#FFF;
+  
+  }
+  
+  
+  
+  .bg-gradient-overlay {
+  
+    background: rgba(0, 0, 0, 0.6);
+  
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(30%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0)));
+  
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0) 100%);
+  
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0) 100%);
+  
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0) 100%);
+  
+    height:100%;
+  
+    width:100%;
+  
+    padding:20px 0px 50px 0px;
+  
+    content:'';
+  
+    display:block;
+  
+  }
+  
+  
+  
+  .about-title-section{
+  
+    padding: 95px 0px 95px 0px;
+  
+    z-index: 9 !important;
+  
+  }
+  
+  
+  
+  .about-title-section .about-title h1{
+  
+    color:#FFF;
+  
+    font-family: 'Playfair Display', serif;
+  
+    font-size: 35px;
+  
+  }
+  
+  
+  
+  .about-light-section{
+  
+    border-radius:10px;
+  
+    padding: 50px 30px;
+  
+    background: #f0f0f0;
+  
+    font-family: 'Raleway', sans-serif;
+  
+    font-size: 14px;
+  
+    line-height: 2;
+  
+    color:#666;
+  
+    font-weight: 500;
+  
+  }
+  
+  
+  
+  .about-padding{
+  
+    padding: 50px 30px;
+  
+  }
+  
+  
+  
+  .about-line-title{
+  
     width: 100%;
-    height: 80px;
-    background-color: white;
-}
-
-ul li a{
-    font-size: 15px;
-    font-weight: bold;
-}
-
-
-/*.navbar-light .navbar-brand{
-    color: black ;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-}*/
-
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>
-.nav-link{
-    color: white;
-}
-
-.navbar-light .navbar-nav .nav-link{
-    color: white;
-}
-
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
-    color: white;
-}
-
-h2.section-title {
-    font-family: Arial Narrow Bold;
+  
+    margin: 0;
+  
+    padding: 0;
+  
+    font-family: 'Raleway', sans-serif;
+  
     font-weight: 700;
-    font-style: italic;
-    font-size: 45px;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-p.text-center{
+  
+    font-size: 28px;
+  
+  }
+  
+  
+  
+  .about-line-title:after {
+  
+      position: relative;
+  
+      top: -6px;
+  
+      right: -20px;
+  
+      height: 3px;
+  
+      content: url(../images/title-right.png);
+  
+      text-shadow: none;
+  
+      width: 140px;
+  
+  }
+  
+  .about-line-title:before {
+  
+      position: relative;
+  
+      top: -6px;
+  
+      left: -20px;
+  
+      height: 3px;
+  
+      content: url(../images/title-left.png);
+  
+      text-shadow: none;
+  
+      width: 140px;
+  
+  }
+  
+  
+  
+  .new-about-section{
+  
+    width: 100%;
+  
+    padding:50px 0px;
+  
+    background: #FFF;
+  
+  }
+  
+  
+  
+  .new-details{
+  
+    position:relative;
+  
+    width:100%;
+  
+    background: #fff;
+  
+    box-shadow:0px 0px 10px rgba(0, 0, 0, .3);
+  
+    border-radius:10px;
+  
+    margin-top:-200px;
+  
+    padding: 50px 30px;
+  
+  }
+  
+  
+  
+  .team {
+  
+      margin: 50px;
+  
+  }
+  
+  
+  
+  .testimonials-section{
+  
+      position:relative;
+  
+      width:100%;
+  
+      margin: 10px;
+  
+      background-color:rgba(255, 157, 157, 0.2);
+  
+      background-repeat:repeat;
+  
+  }
+  
+  
+  
+  #test-carousel .item{width:60%;margin:20px auto;}
+  
+  #test-carousel .item img{width:100%;}
+  
+  #test-carousel .item .caption{display:block;margin-top:20px;text-align:center;left:0;}
+  
+  #test-carousel .item .caption img{max-width:200px;margin:auto;}
+  
+  #test-carousel .item .caption h4{font-size:16px;font-style:italic;color:#262626;text-shadow:none;margin-top:20px;}
+  
+  #test-carousel .item .caption h4:before{content:"\f10d";font-family:FontAwesome;margin-right:20px;}
+  
+  #test-carousel .item .caption h4:after{content:"\f10e";font-family:FontAwesome;margin-left:20px;}
+  
+  #test-carousel .carousel-control.left,
+  
+  #test-carousel .carousel-control.right{background:transparent;width:24px;height:24px;top:30%;margin-right:30px;}
+  
+  #test-carousel .carousel-control.left img,
+  
+  #test-carousel .carousel-control.right img{width:24px;height:24px;opacity:1;}
+  
+  
+  
+  .carousel-section{padding:50px 0px 50px;background:#fff;}
+  
+  p.text-center{
     font-size: 18px;
     font-style: italic;
+  }
+  
+  input[type="submit"]{
+   width: 150px;
+   height: 50px;
+   border: 1px solid;
+   background: #3f77c5;
+   border-radius: 25px;
+   font-size: 18px;
+   color: #e9f4fb;
+   font-weight: 700;
+   cursor: pointer;
+   outline: none;
 }
-
-.row{
-    background-color: black;
-    color: white;
+input[type="submit"]:hover{
+   border-color: #23337c;
+   transition: .5s;
 }
 
     </style>
@@ -97,11 +313,11 @@ p.text-center{
                   <a class="nav-link" href="<%=request.getContextPath()%>/view">View Player Details</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<%=request.getContextPath()%>/update">Update Player Details</a>
+                    <a class="nav-link" href="UpdatePlayer.jsp">Update Player Details</a>
                 </li>
 				
 				<li class="nav-item">
-                    <a class="nav-link" href="<%=request.getContextPath()%>/delete">Delete Player Details</a>
+                    <a class="nav-link" href="DeletePlayer.jsp">Delete Player Details</a>
                 </li>
                 
                  <li class="nav-item">
@@ -111,24 +327,107 @@ p.text-center{
         </div>
         </div>
     </nav>
-    
-      <br>
-      <br>
-      <br><br>
-	<form action="add" method="post">
-        Player Name:
-		<input type="text" name="player_name"/><br>
-        Team Name:
-		<input type="text" name="player_team_name"/><br>
-        Jersey Number:
-		<input type="number" name="player_number"/><br>
-        Player Salary(in Cr.):
-		<input type="number" name="player_salary_in_cr"/><br>
-        Number of ads done:
-		<input type="number" name="number_of_ads"/><br>
-        Matches Played:
-		<input type="number" name="number_of_matches"/><br>
-		<button id="post" type="submit" >Add Player</button>
-	</form>
+    <section class="new-page-img" style="background: url(allteam.jpg);background-position:center center;">
+
+    <div class="bg-gradient-overlay">
+          
+          
+          
+              <div class="container">
+          
+                <div class="about-title-section">
+          
+                  <div class="row1">
+          
+                    <div class="col-sm-12">
+          
+                      <div class="about-title text-center">
+						<br>
+						<br>
+						<br>
+                        <h1 class="heading">Add Player Details</h1>
+          
+                      </div>
+          
+                    </div>
+          
+                  </div>
+          
+                </div>
+          
+          
+          
+              </div>
+          
+          
+          
+    </div>
+    </section>
+     
+	<section class="new-about-section">
+          
+            <div class="container">
+          
+              <div class="row1">
+          
+                <div class="col-md-12">
+          
+                  <div class="new-details no-padding">
+          
+                    <div class="row1">
+          
+                      <div class="col-md-12">
+          
+                        <div class="add_Player_Details text-center">
+          
+                         <form action="add" method="post">
+								
+								<label for="fname">Player Name:</label><br>
+								<input type="text" name="player_name"/><br>
+								<br>
+								
+								<label for="fname">Team Name:</label><br>
+								<input type="text" name="player_team_name"/><br>
+								<br>
+								
+								<label for="fname">Jersey Number:</label><br>
+								<input type="text" name="player_number"/><br>
+								<br>
+								
+								<label for="fname">Player Salary(in Cr.):</label><br>
+								<input type="text" name="player_salary_in_cr"/><br>
+								<br>
+								
+								<label for="fname">Number of ads done:</label><br>
+								<input type="text" name="number_of_ads"/><br>
+								<br>
+								
+								<label for="fname">Matches Played:</label><br>
+								<input type="text" name="number_of_matches"/><br>
+								<br>
+								<input id="post" type="submit" value="Add Player">
+						</form>
+          
+                        </div>
+          
+                      </div>
+          
+                    </div>
+          
+                   </div>
+          
+                  </div>
+          
+                </div>
+          
+              </div>
+          
+            </div>
+          
+          </div>
+          
+	<section class = "addplayer">
+	
+	</section>
 </body>
 </html>

@@ -97,15 +97,15 @@ p.text-center{
                   <a class="nav-link" href="<%=request.getContextPath()%>/view">View Player Details</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<%=request.getContextPath()%>/update">Update Player Details</a>
+                    <a class="nav-link" href="UpdatePlayer.jsp">Update Player Details</a>
                 </li>
 				
 				<li class="nav-item">
-                    <a class="nav-link" href="<%=request.getContextPath()%>/delete">Delete Player Details</a>
+                    <a class="nav-link" href="DeletePlayer.jsp">Delete Player Details</a>
                 </li>
                 
                  <li class="nav-item">
-                    <a class="nav-link" href="aboutus.html">Log Out</a>
+                    <a class="nav-link" href="login.jsp">Log Out</a>
                  </li>
           </ul>
         </div>

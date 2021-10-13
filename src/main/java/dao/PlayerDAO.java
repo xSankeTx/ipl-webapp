@@ -14,6 +14,8 @@ import utility.ConnectionManager;
 public class PlayerDAO implements PlayerDAOInterface {
 	private static final String INSERT_player_SQL = "INSERT INTO player(player_name, player_team_name, player_number,player_salary_in_cr,number_of_ads,number_of_matches)values(?,?,?,?,?,?)";
 	private static final String GET_ALL_PLAYERS = "SELECT * FROM player";
+	private static final String DELETE_PLAYERS = "delete from player where player_name=?";
+	private static final String UPDATE_PLAYER = "update player set player_name=?,player_team_name=?,player_salary_in_cr=?,number_of_ads=?,NUMBER_OF_MATCHES=? where player_number=?";
 	public void insertPlayer(Player player) throws SQLException {
 		System.out.println("Insert player details Invoked");
 		try(
@@ -27,6 +29,48 @@ public class PlayerDAO implements PlayerDAOInterface {
 			ps.setInt(6, player.getNumber_of_matches());
 			ps.executeUpdate();	
 		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} 
+		catch (IOException e) {
+			e.printStackTrace();
+		} 
+	}
+
+	public void deletePlayer(String name) throws SQLException{
+		try(
+            Connection con=ConnectionManager.getConnection();
+			PreparedStatement ps=con.prepareStatement(DELETE_PLAYERS);){
+			ps.setString(1,name);
+			ps.executeUpdate();
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} 
+		catch (IOException e) {
+			e.printStackTrace();
+		} 
+	}
+
+	public void updatePlayer(Player player) throws SQLException {  
+        
+        try(  
+            Connection con=ConnectionManager.getConnection();  
+            PreparedStatement ps=con.prepareStatement(UPDATE_PLAYER);){  
+            ps.setString(1,player.getPlayer_name());  
+            ps.setString(2,player.getPlayer_team_name());    
+            ps.setInt(3,player.getPlayer_salary_in_cr());  
+            ps.setInt(4,player.getNumber_of_ads()); 
+			ps.setInt(5,player.getNumber_of_matches());  
+			ps.setInt(6,player.getPlayer_number());  
+            ps.executeUpdate();     
+        }
 		catch (SQLException e) {
 			e.printStackTrace();
 		} 
