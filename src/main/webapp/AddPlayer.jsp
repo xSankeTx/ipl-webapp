@@ -391,7 +391,7 @@ input[type="submit"]:hover{
 								<br>
 								
 								<label for="fname">Jersey Number:</label><br>
-								<input type="text" name="player_number"/><br>
+								<input type="text" name="player_number" placeholder="Number only" required/><br>
 								<br>
 								
 								<label for="fname">Player Salary(in Cr.):</label><br>

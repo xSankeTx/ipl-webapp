@@ -395,7 +395,7 @@ input[type="submit"]:hover{
 						<label for="tname">Team Name:</label><br>
 						<input type="name" name="n2"/><br><br>
 						<label for="playerNum">Previous Player Number:</label><br>
-						<input type="name" name="n3"/><br><br>
+						<input type="name" name="n3" placeholder="Number only" required/><br><br>
 						<label for="salary">Player Salary(in Cr.):</label><br>
 						<input type="name" name="n4"/><br><br>
 						<label for="ads">Number of ads done:</label><br>

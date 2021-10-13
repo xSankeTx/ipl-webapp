@@ -392,7 +392,7 @@ input[type="submit"]:hover{
           
 							<form action="remove" method="post">
 								<label for="name">Player Name:</label><br>
-								<input type="name" name="name"/><br><br>
+								<input type="name" name="name" required/><br><br>
 								<input type="submit" value="Delete" name="remove"/>
 								</form>
           
